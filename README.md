@@ -57,7 +57,7 @@ Our models leverage a highly complementary mix of physical chemistry descriptors
 The final optimized submission is a weighted ensemble of five distinct models. Each model brings unique learning biases (tabular, Prior-Data Fitted, Graph Neural Network, and Deep Learning):
 
 ### 1. AutoGluon Tabular (Weight: 54.0%)
-* **Description**: A multi-layer stacked ensemble of gradient boosting trees (LightGBM, XGBoost, CatBoost), Random Forests, and deep neural networks trained with AutoGluon's `extreme` preset.
+* **Description**: A multi-layer stacked ensemble trained with AutoGluon's `extreme` preset.
 * **Features**: Trained on a reduced feature set of 500 top-performing descriptors selected using mutual information regression (covering scaled Jazzy, RDKit, Erg, Avalon, MiniMol, and ChemAxon features).
 * **Role**: Serves as the primary heavy-lifter for traditional tabular regression.
 
