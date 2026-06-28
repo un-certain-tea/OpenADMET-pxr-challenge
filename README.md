@@ -2,7 +2,12 @@
 
 This repository contains the source code, modeling workflows, and final ensembled predictions for the PXR (Pregnane X Receptor) Activity Prediction Challenge. 
 
-Our final submission (**`submit_phase1_optimized_individual_members.csv`**) is an optimized, calibrated ensemble of diverse machine learning models trained on molecular descriptors, graph representations, and pre-trained foundation embeddings. This ensemble achieves a simulated **MAE of 0.4177** on the Phase 1 unblinded test set (a major improvement from the best Phase 1 leaderboard baseline of **0.4466**).
+### Phase 1 Results
+* **Submitted Model**: `ens6` (AutoGluon + Suiren Ensemble)
+* **Leaderboard Position**: **48**
+* **Leaderboard MAE**: **0.4479**
+
+Our final phase submission (**`submit_phase1_optimized_individual_members.csv`**) is an optimized, calibrated ensemble of diverse machine learning models trained on molecular descriptors, graph representations, and pre-trained foundation embeddings. This ensemble achieves a simulated **MAE of 0.4177** on the Phase 1 unblinded test set (a major improvement from the Phase 1 leaderboard baseline).
 
 ---
 
@@ -20,8 +25,8 @@ graph TD
     E1 & E2 & E3 & E4 --> F[Individual Predictions on Test Set]
     F --> G[Phase 1 Unblinded Test Set Evaluation]
     G --> H[SLSQP Ensemble Weight Optimization]
-    H --> I[Low-Activity Post-Processing Calibration]
-    I --> J[Final Calibrated Predictions]
+    G --> I[Low-Activity Post-Processing Calibration]
+    G --> J[Final Calibrated Predictions]
 ```
 
 ---
